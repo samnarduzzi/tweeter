@@ -18,6 +18,9 @@
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
     <!-- Icon CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -32,8 +35,21 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="nav-tweeter">tweeter</span>
-      <span class="nav-right"><b>Write</b> a new tweet</span>
+      <div class="nav-right">
+      <span class="new-tweet"><b>Write</b> a new tweet</span>
+        <i class="fa-solid fa-angles-down"></i>
+      </div>
     </nav>
+
+    <header>
+      <div class="user-icon">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <span class="user-name"><b>Sam</b> Narduzzi</span>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
