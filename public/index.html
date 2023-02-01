@@ -1,83 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
 
-    <!-- Nav CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- Header CSS -->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <!-- Nav CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- New Tweet CSS -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- Icon CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- New Tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+  <!-- Display Tweet CSS -->
+  <link rel="stylesheet" href="/styles/display-tweet.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
 
-   <!-- Char Count -->
-   <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+  <!-- Icon CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="nav-tweeter">tweeter</span>
-      <div class="nav-right">
-      <span class="new-tweet"><b>Write</b> a new tweet</span>
-        <i class="fa-solid fa-angles-down"></i>
-      </div>
-    </nav>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <header>
-      <div class="user-icon">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <span class="user-name"><b>Sam</b> Narduzzi</span>
-      </div>
-  </header>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
   
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+  <!-- Char Count -->
+<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <hr>
-          <div class="char-and-tweet">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="nav-tweeter">tweeter</span>
+    <div class="nav-right">
+      <span class="new-tweet"><b>Write</b> a new tweet</span>
+      <i class="fa-solid fa-angles-down"></i>
+    </div>
+  </nav>
+
+  <header>
+    <div class="user-icon">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <span class="user-name"><b>Sam</b> Narduzzi</span>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/" method="POST">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <hr>
+        <div class="char-and-tweet">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+
+    <!-- <section class="tweets-container">
+        <article>
+          <header class="tweets-header">
+            <div>
+              <i class="fa-solid fa-user-astronaut"></i>              <span>Sam</span>
+            </div>
+            <div class="tweets-handler">
+              <span class="">@SNar</span>
+            </div>
+          </header>
+          <main class="tweets-main">
+            <span>This is my first test tweet :)</span>
+          </main>
+          <footer class="tweets-footer">
+            10 days ago
+            <span class="tweets-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </span>
+          </footer>
+        </article>
+      </section> -->
+
+    <!-- Tweet container on main page -->
+    <section class="tweet-container">
+      <article>
+        <header class="tweet-header">
+          <div>
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span>Sam</span>
           </div>
-        </form>
-      </section>
+          <div class="tweets-handler">
+            <span class="handle">@SNar</span>
+          </div>
+        </header>
+        <p class="tweet-test">
+          Hello this is my first test tweet!
+        </p>
+        <footer class="tweet-footer">
+          10 days ago
+          <span class="tweet-icon">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+        </footer>
+      </article>
+    </section>
 
-      <h2>Slippery Salmon</h2>
+  </main>
+</body>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ullam voluptate rerum quam dicta pariatur facere dolores neque animi sed consequuntur fugiat error nulla alias consectetur autem magni officia sint?</p>
-      <h5>Leo the LION</h5>
-    </main>
-  </body>
 </html>
