@@ -33,3 +33,11 @@ textarea {
   justify-content: space-between;
   font-family: 'Bungee';
 }
+
+.counter {
+  color: white;
+}
+
+/* .neg-counter [
+  color: red;
+] */
