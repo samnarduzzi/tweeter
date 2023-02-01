@@ -20,3 +20,8 @@ nav {
   align-items: center;
   padding-right: 1.5em;
 }
+
+.write {
+  font-weight: bold;
+  padding-left: 1em;
+}
