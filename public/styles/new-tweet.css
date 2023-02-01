@@ -1,0 +1,35 @@
+button {
+  font-family: 'Bungee';
+  color: #FFFFFF;
+  background-color: #96C0DC;
+  border: none;
+}
+
+button:hover {
+  box-shadow: 0.25em 0.25em black;
+  background: #4198db;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+textarea {
+  border: none;
+  display: block;
+  width: 750px;
+  height: 40px;
+  background-color: #FFFFFF;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  margin-top: .4em;
+  padding-left: .5em;
+}
+
+.char-and-tweet {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+}
