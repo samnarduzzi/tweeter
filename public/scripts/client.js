@@ -2,43 +2,31 @@
 
 $(document).ready(function() {
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1675119835294
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1675206235294
-    }
-  ];
+  // const data = [
+  //   {
+  //     "user": {
+  //       "name": "Newton",
+  //       "avatars": "https://i.imgur.com/73hZDYK.png",
+  //       "handle": "@SirIsaac"
+  //     },
+  //     "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //     "created_at": 1675119835294
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Descartes",
+  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //       "handle": "@rd"
+  //     },
+  //     "content": {
+  //       "text": "Je pense , donc je suis"
+  //     },
+  //     "created_at": 1675206235294
+  //   }
+  // ];
 
-  const renderTweets = function(tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-
-    for (let tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      // console.log($tweet);
-      $(".tweet-container").append($tweet);
-    }
-
-  };
 
   const createTweetElement = function(tweet) {
     const $tweet = $(`
@@ -76,13 +64,35 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  $('form').submit(function(event) {
+
+  const renderTweets = function(tweets) {
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+
+    for (let tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      // console.log($tweet);
+      $(".tweet-container").append($tweet);
+    }
+
+  };
+
+  $('.form-tweet').submit(function(event) {
     event.preventDefault();
-    const newTweets = $('form').serialize();
-    $.post('/tweets/', newTweets);
+    const newTweets = $('.form-tweet').serialize();
+    $.post('/tweets/', newTweets, function(result) {
+      loadTweets();
+    });
   });
+  
+  const loadTweets = function() {
+    $.get('/tweets/', function(newTweets) {
+      console.log("success", newTweets);
+      renderTweets(newTweets);
+    });
+  };
 
-
-  renderTweets(data);
+  loadTweets();
 
 });
