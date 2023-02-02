@@ -85,7 +85,7 @@ $(document).ready(function() {
       loadTweets();
     });
   });
-  
+
   const loadTweets = function() {
     $.get('/tweets/', function(newTweets) {
       console.log("success", newTweets);
