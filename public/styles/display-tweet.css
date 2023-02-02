@@ -1,14 +1,15 @@
 
-section.tweet-container {
+.tweet {
   width: 60%;
   border: #545149 solid;
   border-width: 3px;
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 1em
+
 }
 
-.tweet-container:hover {
+.tweet:hover {
   box-shadow: 0.25em 0.25em #96C0DC;
 }
 
