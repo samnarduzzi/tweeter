@@ -47,7 +47,7 @@ $(document).ready(function() {
       </div>
 
       <footer class="tweet-footer">
-        <span>${tweet.created_at}</span>
+        <span>${timeago.format(tweet.created_at)}</span>
 
         <div class="tweet-icon">
           <span>
