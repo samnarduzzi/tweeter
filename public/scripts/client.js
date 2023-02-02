@@ -80,6 +80,16 @@ $(document).ready(function() {
 
   $('.form-tweet').submit(function(event) {
     event.preventDefault();
+    const tweetCount = $('#tweet-text').val()
+    
+    if (tweetCount === "") {
+      return alert("Error! Can not post tweet with no text")
+    } 
+    
+    if (tweetCount.length > 140) {
+      return alert("Error! Your post can not have more than 140 characters")
+    }
+    
     const newTweets = $('.form-tweet').serialize();
     $.post('/tweets/', newTweets, function(result) {
       loadTweets();
