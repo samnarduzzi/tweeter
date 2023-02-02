@@ -15,7 +15,7 @@ $(document).ready(function() {
       </header>
 
       <div class="tweet-test">
-        <p>${tweet.content.text}</p>
+        <p>${escape(tweet.content.text)}</p>
       </div>
 
       <footer class="tweet-footer">
@@ -35,6 +35,12 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    console.log(div.innerHTML)
+    return div.innerHTML;
+  };
 
   const renderTweets = function(tweets) {
     $(".tweet-container").empty();
@@ -42,7 +48,7 @@ $(document).ready(function() {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    
+
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $(".tweet-container").prepend($tweet);
