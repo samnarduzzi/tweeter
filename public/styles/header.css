@@ -1,7 +1,6 @@
 header {
   height: 580px;
   width: 100%;
-  /* background-color: #96C0DC; */
   color: #FFFFFF;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
@@ -20,3 +19,16 @@ header {
 .user-name {
   font-size: 1.5em;
 }
+
+
+ @media only screen and (min-width: 1024px) {
+  .profile-header {
+    width: 40%;
+    line-height: 40%;
+    height: 400px;
+    align-items: center;
+    margin-top: 7em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+ }
