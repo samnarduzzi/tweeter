@@ -35,10 +35,10 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
-    console.log(div.innerHTML)
+    console.log(div.innerHTML);
     return div.innerHTML;
   };
 
@@ -58,16 +58,28 @@ $(document).ready(function() {
 
   $('.form-tweet').submit(function(event) {
     event.preventDefault();
-    const tweetCount = $('#tweet-text').val()
-    
+    const tweetCount = $('#tweet-text').val();
+
+    $(".error").slideUp();
+
     if (tweetCount === "") {
-      return alert("Error! Can not post tweet with no text")
-    } 
-    
-    if (tweetCount.length > 140) {
-      return alert("Error! Your post can not have more than 140 characters")
+      $(".error").html("<i class='fa-solid fa-triangle-exclamation'></i> Error! Can not post tweet with no text <i class='fa-solid fa-triangle-exclamation'></i>").slideDown();
+
+      setTimeout(function() {
+        $(".error").slideUp();
+      }, 5000);
+      return;
     }
-    
+
+    if (tweetCount.length > 140) {
+      $(".error").html("<i class='fa-solid fa-triangle-exclamation'></i> Error! Your post can not have more than 140 characters <i class='fa-solid fa-triangle-exclamation'></i>").slideDown();
+
+      setTimeout(function() {
+        $(".error").slideUp();
+      }, 5000);
+      return;
+    }
+
     const newTweets = $('.form-tweet').serialize();
     $.post('/tweets/', newTweets, function(result) {
       loadTweets();

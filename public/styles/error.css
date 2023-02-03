@@ -1,0 +1,13 @@
+.error {
+  /* margin-top: 1em; */
+  display: none;
+  background-color: #f4f1ec;
+  color: red;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: solid red 0.25em;
+  border-radius: 1em;
+  padding: 0.25em;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5em;
+}
