@@ -1,5 +1,6 @@
 nav {
-  background-color: #4056A1;
+  background-color: #4198db;
+  background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
   height: 120px;
   width: 100%;
   color: #FFFFFF;
@@ -7,7 +8,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: relative;
 }
 
 .nav-tweeter {
@@ -32,6 +33,11 @@ nav i {
 
 
  @media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+    position: fixed;
+  }
   .nav-right {
     display: flex;
     flex-direction: column;
