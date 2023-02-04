@@ -15,7 +15,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Project
 
 !["Screenshot of Desktop View"](https://github.com/samnarduzzi/tweeter/blob/master/docs/desktop.png?raw=true)
-!["Screenshot of Tablet View"](https://github.com/samnarduzzi/tweeter/blob/master/docs/tablet.png?raw=true)
+!["Screenshot of Tablet View"](https://github.com/samnarduzzi/tweeter/blob/master/docs/tablet-view.png?raw=true)
 !["Screenshot of Tweet Error: empty tweet"](https://github.com/samnarduzzi/tweeter/blob/master/docs/empty-tweet-error.png?raw=true)
 !["Screenshot of Tweet Error: too long of a tweet"](https://github.com/samnarduzzi/tweeter/blob/master/docs/tweet-length-error.png?raw=true)
 
