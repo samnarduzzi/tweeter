@@ -19,17 +19,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 1.5em;
-}
-
-.write {
-  font-weight: bold;
-  padding-left: 1em;
-  display: inline-block;
+  padding-right: 1em;
 }
 
 nav i {
   color: red;
+  margin-left: 3em;
 }
 
 
