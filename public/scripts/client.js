@@ -82,6 +82,8 @@ $(document).ready(function() {
 
     const newTweets = $('.form-tweet').serialize();
     $.post('/tweets/', newTweets, function(result) {
+      $('#tweet-text').val('');
+      $('.counter').html(140); 
       loadTweets();
     });
   });
